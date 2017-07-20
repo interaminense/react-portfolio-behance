@@ -1,0 +1,9 @@
+.Project img {
+  object-fit: cover;
+  width: 100%; }
+
+.Project h3 {
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
