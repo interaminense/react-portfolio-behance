@@ -8,16 +8,17 @@
     width: inherit;
     height: inherit;
     background-color: #2c2d3d;
+    overflow: hidden;
   }
 
   .User__bg {
     background-size: cover;
     background-position: center;
-    filter: blur(60px);
+    filter: blur(20px);
     position: absolute;
     width: inherit;
     height: inherit;
-    opacity: .1;
+    opacity: .4;
   }
 
   .User__content {

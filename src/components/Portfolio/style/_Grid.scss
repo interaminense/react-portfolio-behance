@@ -1,0 +1,33 @@
+$medias: (
+  (size: 576px, initials: xs), // Small devices (landscape phones, 576px and up)
+  (size: 768px, initials: sm), // Medium devices (tablets, 768px and up)
+  (size: 992px, initials: md), // Large devices (desktops, 992px and up)
+  (size: 1200px, initials: lg) // Extra large devices (large desktops, 1200px and up)
+);
+
+$columns: 12;
+
+@mixin media($initials, $columns) {
+  @for $i from 1 through $columns {
+    &.#{$initials}-#{$i} {
+      $w: $i * (100% / $columns);
+      max-width: $w;
+      flex: 0 0 #{$w};
+    }
+  }
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .Grid__cell {
+
+    @each $media in $medias {
+      @media (min-width: map-get($media, size)) {
+        @include media(map-get($media, initials), $columns);
+      }
+    }
+
+  }
+}

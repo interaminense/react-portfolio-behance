@@ -1,18 +1,14 @@
-.Grid {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .Card {
-  width: calc(100% / 5);
+  width: 100%;
 
   &:hover {
     transform: scale(1.1);
+    z-index: 2;
   }
 
   .Card__media {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }

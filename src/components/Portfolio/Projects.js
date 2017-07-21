@@ -42,7 +42,7 @@ class User extends Component {
 
     const projects = this.state.projects.map((project, i) => {
       return (
-        <article className="Card" key={i}>
+        <article className="Card Grid__cell xs-12 sm-6 md-3 lg-1" key={i}>
           <img className="Card__media" src={project.image} alt="projects" />
           {/*<h3 class="Card__title">{project.name}</h3>*/}
           {/*<a class="Card__btn" href={project.url} target="_blank" >details</a>*/}

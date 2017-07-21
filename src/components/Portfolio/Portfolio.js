@@ -4,6 +4,11 @@ import Projects from './Projects';
 import './style/Portfolio.css';
 
 class Portfolio extends Component {
+
+  handleHoverOn() {
+    console.log('mouseenter')
+  }
+
   render() {
     return (
       <div className="Portfolio">

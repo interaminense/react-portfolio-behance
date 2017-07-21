@@ -4,18 +4,24 @@
   width: 90%;
   margin: 5% auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.2), 0 0 90px rgba(0, 0, 0, 0.3); }
-
-.Grid {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap; }
+  .Portfolio .Portfolio__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out; }
 
 .Card {
-  width: calc(100% / 5); }
+  width: 100%; }
   .Card:hover {
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    z-index: 2; }
   .Card .Card__media {
     width: 100%;
+    height: 100%;
     object-fit: cover; }
 
 .User {
@@ -26,15 +32,16 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    background-color: #2c2d3d; }
+    background-color: #2c2d3d;
+    overflow: hidden; }
   .User .User__bg {
     background-size: cover;
     background-position: center;
-    filter: blur(60px);
+    filter: blur(20px);
     position: absolute;
     width: inherit;
     height: inherit;
-    opacity: .1; }
+    opacity: .4; }
   .User .User__content {
     position: relative;
     width: inherit;
@@ -63,3 +70,155 @@
       font-weight: normal;
       color: rgba(255, 255, 255, 0.1);
       margin: 0; }
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (min-width: 576px) {
+    .Grid .Grid__cell.xs-1 {
+      max-width: 8.33333%;
+      flex: 0 0 8.33333%; }
+    .Grid .Grid__cell.xs-2 {
+      max-width: 16.66667%;
+      flex: 0 0 16.66667%; }
+    .Grid .Grid__cell.xs-3 {
+      max-width: 25%;
+      flex: 0 0 25%; }
+    .Grid .Grid__cell.xs-4 {
+      max-width: 33.33333%;
+      flex: 0 0 33.33333%; }
+    .Grid .Grid__cell.xs-5 {
+      max-width: 41.66667%;
+      flex: 0 0 41.66667%; }
+    .Grid .Grid__cell.xs-6 {
+      max-width: 50%;
+      flex: 0 0 50%; }
+    .Grid .Grid__cell.xs-7 {
+      max-width: 58.33333%;
+      flex: 0 0 58.33333%; }
+    .Grid .Grid__cell.xs-8 {
+      max-width: 66.66667%;
+      flex: 0 0 66.66667%; }
+    .Grid .Grid__cell.xs-9 {
+      max-width: 75%;
+      flex: 0 0 75%; }
+    .Grid .Grid__cell.xs-10 {
+      max-width: 83.33333%;
+      flex: 0 0 83.33333%; }
+    .Grid .Grid__cell.xs-11 {
+      max-width: 91.66667%;
+      flex: 0 0 91.66667%; }
+    .Grid .Grid__cell.xs-12 {
+      max-width: 100%;
+      flex: 0 0 100%; } }
+  @media (min-width: 768px) {
+    .Grid .Grid__cell.sm-1 {
+      max-width: 8.33333%;
+      flex: 0 0 8.33333%; }
+    .Grid .Grid__cell.sm-2 {
+      max-width: 16.66667%;
+      flex: 0 0 16.66667%; }
+    .Grid .Grid__cell.sm-3 {
+      max-width: 25%;
+      flex: 0 0 25%; }
+    .Grid .Grid__cell.sm-4 {
+      max-width: 33.33333%;
+      flex: 0 0 33.33333%; }
+    .Grid .Grid__cell.sm-5 {
+      max-width: 41.66667%;
+      flex: 0 0 41.66667%; }
+    .Grid .Grid__cell.sm-6 {
+      max-width: 50%;
+      flex: 0 0 50%; }
+    .Grid .Grid__cell.sm-7 {
+      max-width: 58.33333%;
+      flex: 0 0 58.33333%; }
+    .Grid .Grid__cell.sm-8 {
+      max-width: 66.66667%;
+      flex: 0 0 66.66667%; }
+    .Grid .Grid__cell.sm-9 {
+      max-width: 75%;
+      flex: 0 0 75%; }
+    .Grid .Grid__cell.sm-10 {
+      max-width: 83.33333%;
+      flex: 0 0 83.33333%; }
+    .Grid .Grid__cell.sm-11 {
+      max-width: 91.66667%;
+      flex: 0 0 91.66667%; }
+    .Grid .Grid__cell.sm-12 {
+      max-width: 100%;
+      flex: 0 0 100%; } }
+  @media (min-width: 992px) {
+    .Grid .Grid__cell.md-1 {
+      max-width: 8.33333%;
+      flex: 0 0 8.33333%; }
+    .Grid .Grid__cell.md-2 {
+      max-width: 16.66667%;
+      flex: 0 0 16.66667%; }
+    .Grid .Grid__cell.md-3 {
+      max-width: 25%;
+      flex: 0 0 25%; }
+    .Grid .Grid__cell.md-4 {
+      max-width: 33.33333%;
+      flex: 0 0 33.33333%; }
+    .Grid .Grid__cell.md-5 {
+      max-width: 41.66667%;
+      flex: 0 0 41.66667%; }
+    .Grid .Grid__cell.md-6 {
+      max-width: 50%;
+      flex: 0 0 50%; }
+    .Grid .Grid__cell.md-7 {
+      max-width: 58.33333%;
+      flex: 0 0 58.33333%; }
+    .Grid .Grid__cell.md-8 {
+      max-width: 66.66667%;
+      flex: 0 0 66.66667%; }
+    .Grid .Grid__cell.md-9 {
+      max-width: 75%;
+      flex: 0 0 75%; }
+    .Grid .Grid__cell.md-10 {
+      max-width: 83.33333%;
+      flex: 0 0 83.33333%; }
+    .Grid .Grid__cell.md-11 {
+      max-width: 91.66667%;
+      flex: 0 0 91.66667%; }
+    .Grid .Grid__cell.md-12 {
+      max-width: 100%;
+      flex: 0 0 100%; } }
+  @media (min-width: 1200px) {
+    .Grid .Grid__cell.lg-1 {
+      max-width: 8.33333%;
+      flex: 0 0 8.33333%; }
+    .Grid .Grid__cell.lg-2 {
+      max-width: 16.66667%;
+      flex: 0 0 16.66667%; }
+    .Grid .Grid__cell.lg-3 {
+      max-width: 25%;
+      flex: 0 0 25%; }
+    .Grid .Grid__cell.lg-4 {
+      max-width: 33.33333%;
+      flex: 0 0 33.33333%; }
+    .Grid .Grid__cell.lg-5 {
+      max-width: 41.66667%;
+      flex: 0 0 41.66667%; }
+    .Grid .Grid__cell.lg-6 {
+      max-width: 50%;
+      flex: 0 0 50%; }
+    .Grid .Grid__cell.lg-7 {
+      max-width: 58.33333%;
+      flex: 0 0 58.33333%; }
+    .Grid .Grid__cell.lg-8 {
+      max-width: 66.66667%;
+      flex: 0 0 66.66667%; }
+    .Grid .Grid__cell.lg-9 {
+      max-width: 75%;
+      flex: 0 0 75%; }
+    .Grid .Grid__cell.lg-10 {
+      max-width: 83.33333%;
+      flex: 0 0 83.33333%; }
+    .Grid .Grid__cell.lg-11 {
+      max-width: 91.66667%;
+      flex: 0 0 91.66667%; }
+    .Grid .Grid__cell.lg-12 {
+      max-width: 100%;
+      flex: 0 0 100%; } }

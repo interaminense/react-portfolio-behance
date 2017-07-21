@@ -7,7 +7,26 @@ $family-type-a: 'Russo One', sans-serif;
   width: 90%;
   margin: 5% auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, .1), 0 0 40px rgba(0, 0, 0, .2), 0 0 90px rgba(0, 0, 0, .3);
+
+  .Portfolio__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 1s ease-in-out;
+  }
 }
+
+// .Grid:hover {
+//   ~ .Portfolio__bg {
+//     background-color: rgba(0, 0, 0, 0.7);
+//     z-index: 0;
+//   }
+// }
 
 @import 'Projects';
 @import 'User';
+@import 'Grid';
