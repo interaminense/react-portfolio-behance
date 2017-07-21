@@ -5,15 +5,11 @@
   "dependencies": {
     "axios": "^0.16.2",
     "gh-pages": "^1.0.0",
-    "material-ui": "^1.0.0-alpha.22",
-    "material-ui-icons": "^1.0.0-alpha.19",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10",
-    "react-tap-event-plugin": "^2.0.1",
-    "typeface-roboto": "0.0.31"
+    "react-scripts": "1.0.10"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

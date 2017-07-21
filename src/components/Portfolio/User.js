@@ -1,12 +1,4 @@
 import React, { Component } from 'react';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
-import Avatar from 'material-ui/Avatar';
-import Grid from 'material-ui/Grid';
-import { indigo } from 'material-ui/colors';
-import Paper from 'material-ui/Paper';
 import axios from 'axios';
 import './style/User.css';
 
@@ -59,23 +51,21 @@ class User extends Component {
 
     const socialLink = this.state.socialLink.map((link, i) => {
       return (
-        <Button color="contrast" href={link.url} target="_blank" key={i}>{link.name}</Button>
+        <li key={i}>
+          <a href={link.url} target="_blank">{link.name}</a>
+        </li>
       );
     });
 
     return (
       <div>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography style={{ flex: 1 }} type="title" color="inherit">{this.state.user.username}</Typography>
-            {socialLink}
-          </Toolbar>
-        </AppBar>
+        {this.state.user.username}
+        <ul>
+          {socialLink}
+        </ul>
 
-        <Paper style={{ backgroundColor: indigo[900], padding: '30px' }}>
-          <Avatar src={this.state.user.image} style={{ width: '180px', height: '180px' }} />
-          <Typography type="headline" style={{ color: indigo[50] }} component="h3">{this.state.user.display_name}</Typography>
-        </Paper>
+        <img src={this.state.user.image} />
+        <h3>{this.state.user.display_name}</h3>
       </div>
     );
   }

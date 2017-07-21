@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import Grid from 'material-ui/Grid';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
 import axios from 'axios';
 import './style/Projects.css';
 
@@ -47,24 +43,18 @@ class User extends Component {
 
     const projects = this.state.projects.map((project, i) => {
       return (
-        <Grid item xs={12} sm={6} md={3} lg={2} key={i}>
-          <Card>
-            <CardMedia><img src={project.image} alt="" /></CardMedia>
-            <CardContent>
-              <Typography type="headline" component="h3">{project.name}</Typography>
-            </CardContent>
-            <CardActions>
-              <Button dense href={project.url} target="_blank" color="primary">details</Button>
-            </CardActions>
-          </Card>
-        </Grid>
+        <div key={i}>
+          <img src={project.image} alt="" />
+          <h3>{project.name}</h3>
+          <a href={project.url} target="_blank" >details</a>
+        </div>
       );
     });
 
     return (
-      <Grid container className="Project">
+      <div>
         {projects}
-      </Grid>
+      </div>
     );
   }
 }
