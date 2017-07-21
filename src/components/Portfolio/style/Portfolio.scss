@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+$family-type-a: 'Russo One', sans-serif;
+
+.Portfolio {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 5% auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .1), 0 0 40px rgba(0, 0, 0, .2), 0 0 90px rgba(0, 0, 0, .3);
+}
+
+@import 'Projects';
+@import 'User';

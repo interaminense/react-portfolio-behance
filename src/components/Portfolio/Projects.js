@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './style/Projects.css';
 
 class User extends Component {
   constructor(props) {
@@ -43,16 +42,16 @@ class User extends Component {
 
     const projects = this.state.projects.map((project, i) => {
       return (
-        <div key={i}>
-          <img src={project.image} alt="" />
-          <h3>{project.name}</h3>
-          <a href={project.url} target="_blank" >details</a>
-        </div>
+        <article className="Card" key={i}>
+          <img className="Card__media" src={project.image} alt="projects" />
+          {/*<h3 class="Card__title">{project.name}</h3>*/}
+          {/*<a class="Card__btn" href={project.url} target="_blank" >details</a>*/}
+        </article>
       );
     });
 
     return (
-      <div>
+      <div className="Grid">
         {projects}
       </div>
     );

@@ -5,7 +5,7 @@ import Portfolio from './components/Portfolio/Portfolio';
 class App extends Component {
   render() {
     return (
-      <Portfolio user="imcreator" />
+      <Portfolio user="AitorPrieto" />
     );
   }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './style/User.css';
 
 class User extends Component {
   constructor(props) {
@@ -36,7 +35,7 @@ class User extends Component {
           social_links: socialLink,
           location: response.data.user.location,
           url: response.data.user.url,
-          image: response.data.user.images[276],
+          image: response.data.user.images[138],
           website: response.data.user.website
         };
 
@@ -58,14 +57,20 @@ class User extends Component {
     });
 
     return (
-      <div>
-        {this.state.user.username}
-        <ul>
-          {socialLink}
-        </ul>
-
-        <img src={this.state.user.image} />
-        <h3>{this.state.user.display_name}</h3>
+      <div className="User">
+        <div className="User__mask">
+          <div className="User__bg" style={{ backgroundImage: `url(${this.state.user.image})` }}></div>
+        </div>
+        <div className="User__content">
+          <div>
+            {/*<ul>
+              {socialLink}
+            </ul>*/}
+            <img src={this.state.user.image} alt="user" />
+            <h1>{this.state.user.username}</h1>
+            <h5>{this.state.user.display_name}</h5>
+          </div>
+        </div>
       </div>
     );
   }
