@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 $family-type-a: 'Russo One', sans-serif;
+$family-type-b: 'Roboto', sans-serif;
+$color-special: #2c2d3d;
 
 .Portfolio {
   background-color: #ffffff;
@@ -20,12 +23,11 @@ $family-type-a: 'Russo One', sans-serif;
   }
 }
 
-// .Grid:hover {
-//   ~ .Portfolio__bg {
-//     background-color: rgba(0, 0, 0, 0.7);
-//     z-index: 0;
-//   }
-// }
+.material-icons.md-12 { font-size: 12px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 @import 'Projects';
 @import 'User';

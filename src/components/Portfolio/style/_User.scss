@@ -7,7 +7,7 @@
     position: absolute;
     width: inherit;
     height: inherit;
-    background-color: #2c2d3d;
+    background-color: $color-special;
     overflow: hidden;
   }
 
@@ -16,9 +16,10 @@
     background-position: center;
     filter: blur(20px);
     position: absolute;
-    width: inherit;
-    height: inherit;
+    width: calc(100% + 120px);
+    height: calc(100% + 120px);
     opacity: .4;
+    margin: -60px;
   }
 
   .User__content {

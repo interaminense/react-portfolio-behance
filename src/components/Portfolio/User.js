@@ -16,6 +16,8 @@ class User extends Component {
     axios.get(this.state.URL_USER())
       .then(response => {
 
+        console.log(response.data.user);
+
         let socialLink = [];
 
         response.data.user.social_links.forEach(function (link) {
@@ -48,13 +50,13 @@ class User extends Component {
 
   render() {
 
-    const socialLink = this.state.socialLink.map((link, i) => {
-      return (
-        <li key={i}>
-          <a href={link.url} target="_blank">{link.name}</a>
-        </li>
-      );
-    });
+    // const socialLink = this.state.socialLink.map((link, i) => {
+    //   return (
+    //     <li key={i}>
+    //       <a href={link.url} target="_blank">{link.name}</a>
+    //     </li>
+    //   );
+    // });
 
     return (
       <div className="User">
@@ -63,9 +65,6 @@ class User extends Component {
         </div>
         <div className="User__content">
           <div>
-            {/*<ul>
-              {socialLink}
-            </ul>*/}
             <img src={this.state.user.image} alt="user" />
             <h1>{this.state.user.username}</h1>
             <h5>{this.state.user.display_name}</h5>
