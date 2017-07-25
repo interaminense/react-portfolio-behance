@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import jsonp from 'jsonp';
 
 class User extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      URL_USER: () => `https://api.behance.net/v2/users/${this.props.user}?client_id=${this.props.apiKey}`,
+      url: this.props.url,
       user: {},
       socialLink: [],
       features: []
@@ -14,15 +14,16 @@ class User extends Component {
   }
 
   componentDidMount() {
-    axios.get(this.state.URL_USER())
-      .then(response => {
 
-        console.log(response.data.user);
+    jsonp(this.state.url, null, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
 
         let socialLink = [], features = [];
 
-        if(response.data.user.social_links !== undefined) {
-          response.data.user.social_links.forEach(link => {
+        if (data.user.social_links !== undefined) {
+          data.user.social_links.forEach(link => {
             let _link = {
               name: link.service_name,
               url: link.url
@@ -31,8 +32,8 @@ class User extends Component {
           });
         }
 
-        if(response.data.user.features !== undefined) {
-          response.data.user.features.forEach(feature => {
+        if (data.user.features !== undefined) {
+          data.user.features.forEach(feature => {
             let _feature = {
               image: feature.site.ribbon.image,
               url: feature.site.url
@@ -43,29 +44,26 @@ class User extends Component {
         }
 
         let user = {
-          display_name: response.data.user.display_name,
-          username: response.data.user.username,
-          fields: response.data.user.fields,
-          location: response.data.user.location,
-          url: response.data.user.url,
-          image: response.data.user.images[138],
-          website: response.data.user.website,
-          description: response.data.user.sections[Object.keys(response.data.user.sections)[0]] || '',
-          appreciations: response.data.user.stats.appreciations,
-          views: response.data.user.stats.views,
-          followers: response.data.user.stats.followers,
+          display_name: data.user.display_name,
+          username: data.user.username,
+          fields: data.user.fields,
+          location: data.user.location,
+          url: data.user.url,
+          image: data.user.images[138],
+          website: data.user.website,
+          description: data.user.sections[Object.keys(data.user.sections)[0]] || '',
+          appreciations: data.user.stats.appreciations,
+          views: data.user.stats.views,
+          followers: data.user.stats.followers,
         };
 
         this.setState({ user, socialLink, features });
-      })
-      .catch(error => {
-        console.log(error);
-      });
+      }
+    });
+
   }
 
   render() {
-
-    console.log('STATE USER', this.state);
 
     const socialLink = this.state.socialLink.map((link, i) => {
       return (

@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import axios from 'axios';
+import jsonp from 'jsonp';
 
 class User extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      URL_PROJECTS: () => `https://api.behance.net/v2/users/${this.props.user}/projects?client_id=${this.props.apiKey}`,
+      url: this.props.url,
       projects: []
     }
   }
 
   componentDidMount() {
-    axios.get(this.state.URL_PROJECTS())
-      .then(response => {
 
-        console.log('response', response.data.projects);
+    jsonp(this.state.url, null, (err, data) => {
+      if (err) {
+        console.log(err);
+      } else {
 
-        let projects = [];
-        let id, higherNumber = 0;
+        console.log(data.projects);
 
-        response.data.projects.forEach(project => {
+        let projects = [], id, higherNumber = 0;
+
+        data.projects.forEach(project => {
 
           //verify if this project has the higher view number
           if (project.stats.views > higherNumber) {
@@ -52,10 +54,8 @@ class User extends Component {
         });
 
         this.setState({ projects });
-      })
-      .catch(error => {
-        console.log(error);
-      });
+      }
+    });
 
   }
 
@@ -64,7 +64,7 @@ class User extends Component {
     const projects = this.state.projects.map((project, i) => {
 
       const showFeatured = () => this.props.showFeatured ? (project.featured() ? 'Card__featured' : '') : '';
-  
+
       const fields = project.fields.map((field, i) => {
         return (
           <span className="Portfolio__badge" key={i}>{field}</span>

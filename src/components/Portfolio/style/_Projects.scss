@@ -32,7 +32,7 @@
   }
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.15);
     box-shadow: 0 25px 35px rgba(0, 0, 0, .6);
     z-index: 2;
     overflow: initial;
@@ -85,7 +85,7 @@
       display: flex;
       align-items: center;
       margin-left: 8px;
-      padding: 0 5px;
+      padding: 2px 5px;
       border-radius: 2px;
     }
 
@@ -128,7 +128,7 @@
       background-color: #f9f9f9;
 
       .Portfolio__btn {
-        transform: scale(.8);
+        transform: scale(.9);
       }
     }
   }

@@ -17,7 +17,7 @@ class App extends Component {
     const user = users[Math.floor(Math.random() * users.length)];
 
     return (
-      <Portfolio user={user} showFeatured />
+      <Portfolio user={user} apiKey='LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' showFeatured />
     );
   }
 }
