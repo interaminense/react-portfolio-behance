@@ -32,6 +32,18 @@
 
     > div {
       text-align: center;
+      width: 100%;
+    }
+
+    p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: rgba(255, 255, 255, .1);
+      font-family: $family-type-b;;
+      width: 90%;
+      max-width: 750px;
+      margin: 15px auto;
     }
 
     img {
@@ -39,7 +51,7 @@
     }
 
     h1 {
-      font-family: "Russo One", sans-serif;
+      font-family: $family-type-a;
       font-weight: normal;
       font-size: 80px;
       text-transform: uppercase;
@@ -58,5 +70,49 @@
       color: rgba(255, 255, 255, .1);
       margin: 0;
     }
+  }
+
+  .User__links {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+
+  .User__features {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    margin: -1px 0 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    a {
+        display: block;
+    }
+
+    img {
+        border-radius: 0;
+    }
+  }
+
+  .User__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 30px;
+    width: auto !important;
   }
 }

@@ -21,6 +21,51 @@ $color-special: #2c2d3d;
     z-index: -1;
     transition: all 1s ease-in-out;
   }
+
+  .Portfolio__btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: $family-type-b;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all .2s linear;
+
+    &.Portfolio__btn--primary {
+      background-color: $color-special;
+      color: #fff;
+
+      &[href]:hover {
+        background-color: darken($color-special, 10%);
+        color: #fff;
+      }
+    }
+
+    .material-icons {
+      margin-right: 5px;
+    }
+
+    &[href]:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .Portfolio__badge {
+    background-color: #e6e6e6;
+    padding: 2px 8px;
+    margin: 0 3px 3px 0;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  .hide {
+    display: none !important;
+  }
 }
 
 .material-icons.md-12 { font-size: 12px; }
@@ -29,6 +74,6 @@ $color-special: #2c2d3d;
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
+@import 'Grid';
 @import 'Projects';
 @import 'User';
-@import 'Grid';

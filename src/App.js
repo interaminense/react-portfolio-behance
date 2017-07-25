@@ -4,9 +4,20 @@ import Portfolio from './components/Portfolio/Portfolio';
 
 class App extends Component {
   render() {
+
+    const users = [
+      'AitorPrieto',
+      'emas',
+      'pixego',
+      'akirax',
+      'dennisschafer',
+      'superfiction'
+    ];
+
+    const user = users[Math.floor(Math.random() * users.length)];
+
     return (
-      //AitorPrieto, emas, pixego
-      <Portfolio user="emas" showFeatured />
+      <Portfolio user={user} showFeatured />
     );
   }
 }

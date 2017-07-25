@@ -42,13 +42,22 @@
     }
 
     .Card__footer {
-      height: 200px;
+      height: 185px;
     }
   }
 
   &.Card__featured {
     z-index: 1;
-    animation: featured 1s linear infinite;
+    animation: featured 3s linear infinite;
+
+    &:hover {
+      .Card__details {
+
+        > div {
+          animation: featuredColor 3s linear infinite;
+        }
+      }
+    }
   }
 
   .Card__media {
@@ -76,6 +85,8 @@
       display: flex;
       align-items: center;
       margin-left: 8px;
+      padding: 0 5px;
+      border-radius: 2px;
     }
 
     .material-icons {
@@ -105,6 +116,21 @@
       font-weight: 200;
       margin-top: 5px;
     }
+
+    .Card__footer-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      margin: 0 -15px;
+      padding: 10px 15px;
+      border-top: 1px solid #f0f0f0;
+      text-align: right;
+      background-color: #f9f9f9;
+
+      .Portfolio__btn {
+        transform: scale(.8);
+      }
+    }
   }
 }
 
@@ -117,5 +143,17 @@
     box-shadow: 0 0 0 1px #2196f3, 0 0 20px 2px #2196f3, 0 0 40px  #2196f3;
   } 75% {
     box-shadow: 0 0 0 1px #ffc107, 0 0 20px 2px #ffc107, 0 0 40px  #ffc107;
+  }
+}
+
+@keyframes featuredColor {
+  0%, 100% {
+    background-color: #4caf50;
+  } 25% {
+    background-color: #f44336;
+  } 50% {
+    background-color: #2196f3;
+  } 75% {
+    background-color: #ffc107;
   }
 }

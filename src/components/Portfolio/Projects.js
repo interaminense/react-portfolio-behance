@@ -34,7 +34,7 @@ class User extends Component {
           if (!imageBlocked.test(project.covers[202])) {
             let data = {
               name: project.name,
-              published_on: () => moment(project.published_on * 1000).subtract(10, 'days').calendar(),
+              published_on: () => moment(project.published_on * 1000).calendar(),
               thumbnail: project.covers[115],
               image: project.covers[404] || project.covers[202],
               stats: {
@@ -43,7 +43,8 @@ class User extends Component {
               },
               created_on: project.created_on,
               url: project.url,
-              featured: () => project.id === id ? true : false
+              featured: () => project.id === id ? true : false,
+              fields: project.fields
             }
 
             projects.push(data);
@@ -63,8 +64,12 @@ class User extends Component {
     const projects = this.state.projects.map((project, i) => {
 
       const showFeatured = () => this.props.showFeatured ? (project.featured() ? 'Card__featured' : '') : '';
-
-      console.log(this.props.showFeatured);
+  
+      const fields = project.fields.map((field, i) => {
+        return (
+          <span className="Portfolio__badge" key={i}>{field}</span>
+        );
+      });
 
       return (
         <article className={`Card Grid__cell xs-12 sm-6 md-3 lg-2 ${showFeatured()}`} key={i}>
@@ -79,8 +84,14 @@ class User extends Component {
             </div>
           </div>
           <div className="Card__footer">
-            <small>{project.published_on()}</small>
+            <small>published on {project.published_on()}</small>
             <h2>{project.name}</h2>
+            <p>
+              {fields}
+            </p>
+            <div className="Card__footer-footer">
+              <a className="Portfolio__btn Portfolio__btn--primary" href={project.url} target="_blank">more details</a>
+            </div>
           </div>
         </article>
       );
