@@ -1,0 +1,9 @@
+.Projects {
+  background-color: $color-special;
+
+  &:hover {
+    .Card:not(:hover) {
+      opacity: $portfolio-opacity-card-hover;
+    }
+  }
+}

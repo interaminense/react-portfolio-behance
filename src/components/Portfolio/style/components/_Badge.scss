@@ -1,0 +1,7 @@
+.badge {
+  background-color: darken($color-white, 15%);
+  padding: $badge-padding;
+  margin: $badge-margin;
+  display: inline-block;
+  border-radius: $badge-border-radius;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from './User';
 import Projects from './Projects';
-import './style/Portfolio.css';
+import './style/main.css';
 
 class Portfolio extends Component {
   constructor(props) {

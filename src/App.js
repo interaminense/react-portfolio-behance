@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
 import Portfolio from './components/Portfolio/Portfolio';
 
 class App extends Component {
-  render() {
+  constructor(props) {
+    super(props);
 
-    const users = [
+    const listUsers = [
       'AitorPrieto',
       'emas',
       'pixego',
@@ -14,11 +14,13 @@ class App extends Component {
       'superfiction'
     ];
 
-    const user = users[Math.floor(Math.random() * users.length)];
+    this.state = {
+      user: listUsers[Math.floor(Math.random() * listUsers.length)]
+    }
+  }
 
-    return (
-      <Portfolio user={user} apiKey='LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' showFeatured />
-    );
+  render() {
+    return <Portfolio user={this.state.user} apiKey='LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' showFeatured />;
   }
 }
 

@@ -67,7 +67,7 @@ class User extends Component {
 
       const fields = project.fields.map((field, i) => {
         return (
-          <span className="Portfolio__badge" key={i}>{field}</span>
+          <span className="badge" key={i}>{field}</span>
         );
       });
 
@@ -90,7 +90,7 @@ class User extends Component {
               {fields}
             </p>
             <div className="Card__footer-footer">
-              <a className="Portfolio__btn Portfolio__btn--primary" href={project.url} target="_blank">more details</a>
+              <a className="btn btn--primary" href={project.url} target="_blank">more details</a>
             </div>
           </div>
         </article>

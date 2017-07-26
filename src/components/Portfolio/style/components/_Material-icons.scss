@@ -1,0 +1,7 @@
+.material-icons {
+  @each $size in $material-icons-size {
+    &.md-#{$size} {
+      font-size: #{$size}px;
+    }
+  }
+}

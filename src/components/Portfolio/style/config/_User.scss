@@ -1,7 +1,7 @@
 .User {
   position: relative;
-  width: 100%;
-  height: 600px;
+  width: $portfolio-user-w;
+  height: $portfolio-user-h;
 
   .User__mask {
     position: absolute;
@@ -14,12 +14,12 @@
   .User__bg {
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
+    filter: blur($portfolio-user-bg-filter);
     position: absolute;
-    width: calc(100% + 120px);
-    height: calc(100% + 120px);
-    opacity: .4;
-    margin: -60px;
+    width: $portfolio-user-bg-w;
+    height: $portfolio-user-bg-h;
+    opacity: $portfolio-user-bg-opacity;
+    margin: -#{$porfolio-user-bg-margin};
   }
 
   .User__content {
@@ -39,35 +39,35 @@
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      color: rgba(255, 255, 255, .1);
-      font-family: $family-type-b;;
-      width: 90%;
-      max-width: 750px;
-      margin: 15px auto;
+      color: rgba($color-white, .1);
+      font-family: $family-type-b;
+      width: $portfolio-user-content-p-width;
+      max-width: $portfolio-user-content-p-max-width;
+      margin: #{$portfolio-user-content-p-margin} auto;
     }
 
     img {
-      border-radius: 50%;
+      border-radius: $portfolio-user-content-img-border;
     }
 
     h1 {
       font-family: $family-type-a;
       font-weight: normal;
-      font-size: 80px;
+      font-size: $portfolio-user-content-h1-font-size;
       text-transform: uppercase;
       color: transparent;
       margin: 0;
-      background: linear-gradient(rgba(255, 255, 255, .7) 50%, rgba(255, 255, 255, .6) 50%);
+      background: $portfolio-user-content-h1-bg;
       background-clip: text;
       -webkit-background-clip: text;
     }
 
     h5 {
       font-family: $family-type-a;
-      font-size: 30px;
+      font-size: $portfolio-user-content-h5-font-size;
       text-transform: uppercase;
       font-weight: normal;
-      color: rgba(255, 255, 255, .1);
+      color: rgba($color-white, .1);
       margin: 0;
     }
   }
@@ -76,7 +76,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px;
+    margin: $portfolio-user-links-margin;
     padding: 0;
 
     li {
@@ -87,16 +87,14 @@
   }
 
   .User__features {
-    position: absolute;
-    right: 30px;
-    top: 0;
-    margin: -1px 0 0;
+    @include absolute(0, 30px, initial, initial);
+    margin: $portfolio-user-features-margin;
     padding: 0;
 
     li {
       list-style: none;
       display: inline-block;
-      margin: 0 5px;
+      margin: $portfolio-user-features-li-margin;
     }
 
     a {
@@ -109,10 +107,8 @@
   }
 
   .User__info {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: 30px;
+    @include absolute(initial, initial, 0, 0);
+    margin: $portfolio-user-info-margin;
     width: auto !important;
   }
 }

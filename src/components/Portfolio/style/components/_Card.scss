@@ -1,0 +1,118 @@
+.Card {
+  font-family: $family-type-b;
+  font-size: 12px;
+  width: 100%;
+  position: relative;
+  display: grid; //warning - verify browsers support
+  overflow: hidden;
+  opacity: 1;
+  transition: $card-transition-type-a;
+
+  &:after {
+    content: "";
+    @include absolute(0, 0, initial, 0);
+    width: 100%;
+    background: $card-after-bg;
+    height: 40%;
+    opacity: 0;
+    transition: $card-transition-type-b;
+  }
+
+  &:hover {
+    transform: $card-hover-scale;
+    box-shadow: $card-box-shadow;
+    z-index: 2;
+    overflow: initial;
+
+    &:after {
+      opacity: 1;
+    }
+
+    .Card__footer {
+      height: $card-footer-h;
+    }
+  }
+
+  &.Card__featured {
+    z-index: 1;
+    animation: featured 3s linear infinite;
+
+    &:hover {
+      .Card__details {
+
+        > div {
+          animation: featuredColor 3s linear infinite;
+        }
+      }
+    }
+  }
+
+  .Card__media {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .Card__thumbnail {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    filter: $card-thumbnail-blur;
+  }
+
+  .Card__details {
+    @include absolute(5px, 10px, initial, initial);
+    display: flex;
+    color: $color-white;
+    z-index: 1;
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin: $card-details-div-margin;
+      padding: $card-details-div-padding;
+      border-radius: $card-details-border-radius;
+    }
+
+    .material-icons {
+      margin-right: 5px;
+    }
+  }
+
+  .Card__footer {
+    @include absolute(initial, initial, 0, 0);
+    height: 0;
+    width: 100%;
+    padding: 0 #{$card-footer-padding};
+    background-color: $color-white;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: $card-transition-type-c;
+    box-shadow: $card-box-shadow;
+
+    small {
+      display: block;
+      margin: $card-footer-small-margin;
+      font-weight: $card-footer-small-font-weight;
+    }
+
+    h2 {
+      font-weight: $card-footer-h2-font-weight;
+      margin: $card-footer-h2-margin;
+    }
+
+    .Card__footer-footer {
+      @include absolute(initial, initial, 0, 0);
+      width: 100%;
+      margin: $card-footer-footer-margin;
+      padding: $card-footer-footer-padding;
+      border-top: 1px solid darken($color-white, 10%);
+      text-align: right;
+      background-color: darken($color-white, 5%);
+
+      .btn {
+        transform: scale(.9);
+      }
+    }
+  }
+}

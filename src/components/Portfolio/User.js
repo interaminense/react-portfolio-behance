@@ -68,7 +68,7 @@ class User extends Component {
     const socialLink = this.state.socialLink.map((link, i) => {
       return (
         <li key={i}>
-          <a className="Portfolio__btn" href={link.url} target="_blank">
+          <a className="btn" href={link.url} target="_blank">
             {link.name}
           </a>
         </li>
@@ -96,9 +96,9 @@ class User extends Component {
             <h1>{this.state.user.username}</h1>
             <h5>{this.state.user.display_name}</h5>
             <div>
-              <span className="Portfolio__btn"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
-              <span className="Portfolio__btn"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
-              <span className="Portfolio__btn"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
+              <span className="btn"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
+              <span className="btn"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
+              <span className="btn"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
             </div>
             <p>{this.state.user.description}</p>
           </div>
@@ -109,10 +109,10 @@ class User extends Component {
             {features}
           </ul>
           <div className="User__info">
-            <a className="Portfolio__btn">
+            <a className="btn">
               <i className="material-icons md-12">place</i> {this.state.user.location}
             </a>
-            <a href={`http://${this.state.user.website}`} target="_blank" className={`Portfolio__btn ${this.state.user.website === '' ? 'hide' : ''}`}>
+            <a href={`http://${this.state.user.website}`} target="_blank" className={`btn ${this.state.user.website === '' ? 'hide' : ''}`}>
               <i className="material-icons md-12">home</i> my website
             </a>
           </div>

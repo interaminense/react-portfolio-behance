@@ -1,0 +1,21 @@
+.Portfolio {
+  background-color: $color-white;
+  width: $portfolio-w;
+  margin: #{$portfolio-margin-h} auto;
+  box-shadow: $portfolio-shadow;
+
+  .Portfolio__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: $transition-type-a;
+  }
+
+  .hide {
+    display: none !important;
+  }
+}

@@ -1,0 +1,32 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: $family-type-b;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: $btn-padding;
+    border-radius: $btn-border-radius;
+    transition: $transition-type-b;
+
+    &.btn--primary {
+      background-color: $color-special;
+      color: $color-white;
+
+      &[href]:hover {
+        background-color: darken($color-special, 10%);
+        color: $color-white;
+      }
+    }
+
+    .material-icons {
+      margin-right: 5px;
+    }
+
+    &[href]:hover {
+      background-color:$color-white;
+      color: $color-black;
+    }
+  }

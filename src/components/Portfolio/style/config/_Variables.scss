@@ -1,0 +1,91 @@
+$family-type-a: 'Russo One', sans-serif;
+$family-type-b: 'Roboto', sans-serif;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-green: #4caf50;
+$color-red: #f44336;
+$color-blue: #2196f3;
+$color-yellow: #ffc107;
+$color-special: #2c2d3d;
+$bg-body: darken($color-special, 15%);
+
+$transition-type-a: all 1s ease-in-out;
+$transition-type-b: all .2s linear;
+
+$gap: 15px;
+
+// Media Query
+
+$medias: (
+  (size: 576px, initials: xs), // Small devices (landscape phones, 576px and up)
+  (size: 768px, initials: sm), // Medium devices (tablets, 768px and up)
+  (size: 992px, initials: md), // Large devices (desktops, 992px and up)
+  (size: 1200px, initials: lg) // Extra large devices (large desktops, 1200px and up)
+);
+
+$columns: 12;
+
+// Portfolio
+
+$portfolio-w: 90%;
+$portfolio-margin-h: 5%;
+$portfolio-shadow: 0 0 5px rgba($color-black, .1), 0 0 40px rgba($color-black, .2), 0 0 90px rgba($color-black, .3);
+$portfolio-opacity-card-hover: .5;
+$portfolio-user-w: 100%;
+$portfolio-user-h: 600px;
+$portfolio-user-bg-filter: 20px;
+$porfolio-user-bg-margin: 60px;
+$portfolio-user-bg-w: calc(100% + #{$porfolio-user-bg-margin * 2});
+$portfolio-user-bg-h: $portfolio-user-bg-w;
+$portfolio-user-bg-opacity: .4;
+$portfolio-user-content-p-width: 90%;
+$portfolio-user-content-p-max-width: 750px;
+$portfolio-user-content-p-margin: $gap;
+$portfolio-user-content-img-border: 50%; 
+$portfolio-user-content-h1-bg: linear-gradient(rgba($color-white, .7) 50%, rgba($color-white, .6) 50%); 
+$portfolio-user-content-h1-font-size: 80px;
+$portfolio-user-content-h5-font-size: 30px;
+$portfolio-user-features-margin: -1px 0 0;
+$portfolio-user-features-li-margin: 0 5px;
+$portfolio-user-links-margin: $gap * 2;
+$portfolio-user-info-margin: $gap * 2;
+
+// Component Badge
+
+$badge-padding: 2px 8px;
+$badge-margin: 0 3px 3px 0;
+$badge-border-radius: 2px;
+
+// Component Button
+
+$btn-font-size: 12px;
+$btn-font-weight: 600;
+$btn-padding: 10px #{$gap};
+$btn-border-radius: 4px;
+
+// Component Card
+
+$card-box-shadow: 0 25px 35px rgba($color-black, .6);
+$card-font-size: 12px;
+$card-after-bg: linear-gradient(rgba($color-black, .6), transparent);
+$card-transition-type-a: transform .2s ease-in-out, opacity .1s linear;
+$card-transition-type-b: opacity .2s ease-in-out .2s;
+$card-transition-type-c: height .2s ease-in-out .2s;
+$card-hover-scale: scale(1.15);
+$card-footer-h: 185px;
+$card-thumbnail-blur: blur(10px);
+$card-details-div-padding: 2px 5px;
+$card-details-div-margin: 0 0 0 8px;
+$card-details-border-radius: 2px;
+$card-footer-padding: $gap;
+$card-footer-small-margin: #{$gap} 0 0;
+$card-footer-small-font-weight: 200;
+$card-footer-h2-font-weight: 200;
+$card-footer-h2-margin: 5px 0 0 0;
+$card-footer-footer-margin: 0 -#{$gap};
+$card-footer-footer-padding: 10px #{$gap};
+
+// Component Material Icons
+
+$material-icons-size: '12', '18', '24', '32', '48';

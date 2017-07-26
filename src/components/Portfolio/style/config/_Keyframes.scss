@@ -1,0 +1,23 @@
+@keyframes featured {
+  0%, 100% {
+    box-shadow: 0 0 0 1px $color-green, 0 0 20px 2px $color-green, 0 0 40px  $color-green;
+  } 25% {
+    box-shadow: 0 0 0 1px $color-red, 0 0 20px 2px $color-red, 0 0 40px  $color-red;
+  } 50% {
+    box-shadow: 0 0 0 1px $color-blue, 0 0 20px 2px $color-blue, 0 0 40px  $color-blue;
+  } 75% {
+    box-shadow: 0 0 0 1px $color-yellow, 0 0 20px 2px $color-yellow, 0 0 40px  $color-yellow;
+  }
+}
+
+@keyframes featuredColor {
+  0%, 100% {
+    background-color: $color-green;
+  } 25% {
+    background-color: $color-red;
+  } 50% {
+    background-color: $color-blue;
+  } 75% {
+    background-color: $color-yellow;
+  }
+}
