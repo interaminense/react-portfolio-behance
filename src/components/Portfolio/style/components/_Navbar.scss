@@ -1,0 +1,53 @@
+.Nav {
+  visibility: hidden;
+  height: $nav-h;
+  padding: $nav-padding;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $nav-background-color;
+  box-shadow: $nav-box-shadow;
+  transition: transform .2s ease-in-out, visibility 0s linear .2s;
+  transform: translateY(-100%);
+
+  &.Nav--is-visible {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform .2s ease-in-out, visibility 0s linear 0s;
+  }
+
+  .Nav__thumbnail {
+    border-radius: 50%;
+    width: $nav-thumbnail-size;
+    margin: $nav-thumbnail-margin;
+  }
+
+  .Nav__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .Nav__name {
+    color: $nav-name-color;
+    text-transform: uppercase;
+    font-size: $nav-name-font-size; 
+    font-weight: $nav-name-font-weight;
+    font-family: $nav-name-font-family;
+  }
+
+  .Nav__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .Nav__menu li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

@@ -142,6 +142,47 @@ body {
   .Projects:hover .Card:not(:hover) {
     opacity: 0.5; }
 
+.Nav {
+  visibility: hidden;
+  height: calc(15px * 4);
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c2d3d;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  transition: transform .2s ease-in-out, visibility 0s linear .2s;
+  transform: translateY(-100%); }
+  .Nav.Nav--is-visible {
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform .2s ease-in-out, visibility 0s linear 0s; }
+  .Nav .Nav__thumbnail {
+    border-radius: 50%;
+    width: 36px;
+    margin: 0 15px 0 0; }
+  .Nav .Nav__title {
+    display: flex;
+    align-items: center; }
+  .Nav .Nav__name {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: "Russo One", sans-serif; }
+  .Nav .Nav__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .Nav .Nav__menu li {
+    display: inline-block;
+    margin-left: 10px; }
+
 .badge {
   background-color: #d9d9d9;
   padding: 2px 8px;
@@ -167,13 +208,13 @@ body {
     color: #ffffff;
     background-color: transparent; }
     .btn.btn--default[href]:hover {
-      color: #ffffff;
+      color: #000000;
       background-color: #ffffff; }
   .btn.btn--primary {
     color: #000000;
     background-color: transparent; }
     .btn.btn--primary[href]:hover {
-      color: #ffffff;
+      color: #000000;
       background-color: #17171f; }
   .btn .material-icons {
     margin-right: 5px; }

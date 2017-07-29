@@ -8,9 +8,13 @@ class User extends Component {
     this.state = {
       user: {}
     }
+
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
+
+    window.addEventListener('scroll', this.handleScroll);
 
     jsonp(this.props.url, null, (err, data) => {
       if (err) {
@@ -57,9 +61,18 @@ class User extends Component {
         };
 
         this.setState({ user });
-      } 
+      }
     });
 
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll() {
+    let _showHeader = () => window.scrollY > 500 ? true : false;
+    this.setState({ showHeader: _showHeader() });
   }
 
   render() {
@@ -70,7 +83,7 @@ class User extends Component {
     let socialLink = _socialLink.map((link, i) => {
       return (
         <li key={i}>
-          <a className="btn" href={link.url} target="_blank">
+          <a className="btn btn--default" href={link.url} target="_blank">
             {link.name}
           </a>
         </li>
@@ -89,6 +102,19 @@ class User extends Component {
 
     return (
       <div className="User">
+
+        <header>
+          <nav className={`Nav ${this.state.showHeader ? 'Nav--is-visible' : ''}`}>
+            <div className="Nav__title">
+              <img className="Nav__thumbnail" src={this.state.user.image} alt="user" />
+              <span className="Nav__name">{this.state.user.username}</span>
+            </div>
+            <ul className="Nav__menu">
+              {socialLink}
+            </ul>
+          </nav>
+        </header>
+
         <div className="User__mask">
           <div className="User__bg" style={{ backgroundImage: `url(${this.state.user.image})` }}></div>
         </div>
@@ -98,9 +124,9 @@ class User extends Component {
             <h1>{this.state.user.username}</h1>
             <h5>{this.state.user.display_name}</h5>
             <div>
-              <span className="btn"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
-              <span className="btn"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
-              <span className="btn"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
+              <span className="btn btn--default"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
+              <span className="btn btn--default"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
+              <span className="btn btn--default"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
             </div>
             <p>{this.state.user.description}</p>
           </div>
@@ -111,10 +137,10 @@ class User extends Component {
             {features}
           </ul>
           <div className="User__info">
-            <a className="btn">
+            <a className="btn btn--default">
               <i className="material-icons md-12">place</i> {this.state.user.location}
             </a>
-            <a href={`http://${this.state.user.website}`} target="_blank" className={`btn ${this.state.user.website === '' ? 'hide' : ''}`}>
+            <a href={`http://${this.state.user.website}`} target="_blank" className={`btn btn--default ${this.state.user.website === '' ? 'hide' : ''}`}>
               <i className="material-icons md-12">home</i> my website
             </a>
           </div>

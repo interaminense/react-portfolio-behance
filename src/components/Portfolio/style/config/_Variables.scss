@@ -72,7 +72,7 @@ $btn-default-background-color: transparent;
 $btn-default-background-color-hover: $color-white;
 
 $btn-primary-color: $color-black;
-$btn-default-color-hover: $color-white;
+$btn-primary-color-hover: $color-white;
 $btn-primary-background-color: transparent;
 $btn-primary-background-color-hover: darken($color-special, 10%);
 
@@ -101,3 +101,18 @@ $card-footer-footer-padding: 5px 0px;
 // Component Material Icons
 
 $material-icons-size: '12', '18', '24', '32', '48';
+
+// Component Navbar
+
+$nav-h: calc(#{$gap} * 4);
+$nav-padding: 0 $gap;
+$nav-background-color: $color-special;
+$nav-box-shadow: 0 5px 5px rgba($color-black, .2);
+
+$nav-thumbnail-size: 36px;
+$nav-thumbnail-margin: 0 $gap 0 0;
+
+$nav-name-color: $color-white;
+$nav-name-font-size: inherit;
+$nav-name-font-weight: inherit;
+$nav-name-font-family: $family-type-a;
