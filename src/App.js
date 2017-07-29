@@ -16,8 +16,8 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route path="/:username" component={Param} />
-          <Route path="/" component={ParamDefault} />
+          <Route path="/react-portfolio-behance/:username" component={Param} />
+          <Route path="/react-portfolio-behance" component={ParamDefault} />
         </Switch>
       </Router>
     );

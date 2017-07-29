@@ -142,6 +142,140 @@ body {
   .Projects:hover .Card:not(:hover) {
     opacity: 0.5; }
 
+[data-tooltip]:after, [data-tooltip]:before {
+  visibility: hidden;
+  opacity: 0; }
+
+[data-tooltip]:hover:after, [data-tooltip]:hover:before {
+  visibility: visible;
+  opacity: 1; }
+
+[data-tooltip]:after, [data-tooltip]:before {
+  transition: all 0.2s linear; }
+
+[data-tooltip][data-tooltip-placement="top"]:after {
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 50%;
+  transform: translate(-50%, -98%); }
+
+[data-tooltip][data-tooltip-placement="right"]:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  transform: translate(98%, -50%); }
+
+[data-tooltip][data-tooltip-placement="bottom"]:after {
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 98%); }
+
+[data-tooltip][data-tooltip-placement="left"]:after {
+  position: absolute;
+  top: 50%;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  transform: translate(-98%, -50%); }
+
+[data-tooltip][data-tooltip-placement="top"]:before, [data-tooltip][data-tooltip-placement="bottom"]:before {
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent; }
+
+[data-tooltip][data-tooltip-placement="right"]:before, [data-tooltip][data-tooltip-placement="left"]:before {
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; }
+
+[data-tooltip][data-tooltip-placement="top"]:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0; }
+
+[data-tooltip][data-tooltip-placement="right"]:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: initial; }
+
+[data-tooltip][data-tooltip-placement="bottom"]:before {
+  position: absolute;
+  top: initial;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+[data-tooltip][data-tooltip-placement="left"]:before {
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: 0;
+  left: 0; }
+
+[data-tooltip][data-tooltip-placement="top"]:hover:after {
+  transform: translate(-50%, calc(-100% - 10px)); }
+
+[data-tooltip][data-tooltip-placement="right"]:hover:after {
+  transform: translate(calc(100% + 10px), -50%); }
+
+[data-tooltip][data-tooltip-placement="bottom"]:hover:after {
+  transform: translate(-50%, calc(100% + 10px)); }
+
+[data-tooltip][data-tooltip-placement="left"]:hover:after {
+  transform: translate(calc(-100% - 10px), -50%); }
+
+[data-tooltip][data-tooltip-placement="top"]:hover:before {
+  transform: translate(0, -10px); }
+
+[data-tooltip][data-tooltip-placement="right"]:hover:before {
+  transform: translate(10px, 0); }
+
+[data-tooltip][data-tooltip-placement="bottom"]:hover:before {
+  transform: translate(0, 10px); }
+
+[data-tooltip][data-tooltip-placement="left"]:hover:before {
+  transform: translate(-10px, 0); }
+
+[data-tooltip] {
+  position: relative; }
+  [data-tooltip][data-tooltip-placement="top"]:before {
+    border-top: 5px solid #2c2d3d; }
+  [data-tooltip][data-tooltip-placement="right"]:before {
+    border-right: 5px solid #2c2d3d; }
+  [data-tooltip][data-tooltip-placement="bottom"]:before {
+    border-bottom: 5px solid #2c2d3d; }
+  [data-tooltip][data-tooltip-placement="left"]:before {
+    border-left: 5px solid #2c2d3d; }
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    white-space: normal;
+    width: 120px;
+    background-color: #2c2d3d;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5em;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    margin: auto; }
+  [data-tooltip]:before {
+    content: "";
+    margin: auto;
+    width: 0;
+    height: 0;
+    transform: translate(0, 0); }
+
 .Nav {
   visibility: hidden;
   height: calc(15px * 4);
@@ -214,7 +348,7 @@ body {
     color: #000000;
     background-color: transparent; }
     .btn.btn--primary[href]:hover {
-      color: #000000;
+      color: #ffffff;
       background-color: #17171f; }
   .btn .material-icons {
     margin-right: 5px; }

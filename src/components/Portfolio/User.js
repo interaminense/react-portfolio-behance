@@ -5,6 +5,8 @@ class User extends Component {
   constructor(props) {
     super(props);
 
+    this.sizeShowHeader = 500;
+
     this.state = {
       user: {}
     }
@@ -36,6 +38,7 @@ class User extends Component {
         if (data.user.features !== undefined) {
           data.user.features.forEach(feature => {
             let _feature = {
+              name: feature.site.name,
               image: feature.site.ribbon.image,
               url: feature.site.url
             }
@@ -71,7 +74,7 @@ class User extends Component {
   }
 
   handleScroll() {
-    let _showHeader = () => window.scrollY > 500 ? true : false;
+    let _showHeader = () => window.scrollY > this.sizeShowHeader ? true : false;
     this.setState({ showHeader: _showHeader() });
   }
 
@@ -93,7 +96,7 @@ class User extends Component {
     let features = _features.map((feature, i) => {
       return (
         <li key={i}>
-          <a href={feature.url} target="_blank">
+          <a data-tooltip={`featured by ${feature.name}`} data-tooltip-placement="bottom" href={feature.url} target="_blank">
             <img src={feature.image} alt="feature flag" />
           </a>
         </li>
@@ -124,9 +127,9 @@ class User extends Component {
             <h1>{this.state.user.username}</h1>
             <h5>{this.state.user.display_name}</h5>
             <div>
-              <span className="btn btn--default"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
-              <span className="btn btn--default"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
-              <span className="btn btn--default"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
+              <span data-tooltip="total of appreciations" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
+              <span data-tooltip="total of views" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
+              <span data-tooltip="total of followers" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
             </div>
             <p>{this.state.user.description}</p>
           </div>
