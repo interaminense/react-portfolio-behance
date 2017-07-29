@@ -116,3 +116,15 @@ $nav-name-color: $color-white;
 $nav-name-font-size: inherit;
 $nav-name-font-weight: inherit;
 $nav-name-font-family: $family-type-a;
+
+// Compoment Tooltip
+
+$tooltip-w: 120px;
+$tooltip-color: $color-white;
+$tooltip-background-color: $color-special;
+$tooltip-padding: 5px;
+$tooltip-border-radius: 2px;
+$tooltip-font-size: 12px;
+$tooltip-font-family: $family-type-b;
+$tooltip-line-height: 1.5em;
+$tooltip-transition: $transition-type-b;
