@@ -7,19 +7,16 @@ class User extends Component {
     super(props);
 
     this.state = {
-      url: this.props.url,
       projects: []
     }
   }
 
   componentDidMount() {
 
-    jsonp(this.state.url, null, (err, data) => {
+    jsonp(this.props.url, null, (err, data) => {
       if (err) {
         console.log(err);
       } else {
-
-        console.log(data.projects);
 
         let projects = [], id, higherNumber = 0;
 
@@ -61,11 +58,11 @@ class User extends Component {
 
   render() {
 
-    const projects = this.state.projects.map((project, i) => {
+    let projects = this.state.projects.map((project, i) => {
 
-      const showFeatured = () => this.props.showFeatured ? (project.featured() ? 'Card__featured' : '') : '';
+      let showFeatured = () => this.props.showFeatured ? (project.featured() ? 'Card__featured' : '') : '';
 
-      const fields = project.fields.map((field, i) => {
+      let fields = project.fields.map((field, i) => {
         return (
           <span className="badge" key={i}>{field}</span>
         );

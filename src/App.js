@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import Portfolio from './components/Portfolio/Portfolio';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    const listUsers = [
-      'AitorPrieto',
-      'emas',
-      'pixego',
-      'akirax',
-      'dennisschafer',
-      'superfiction'
-    ];
-
-    this.state = {
-      user: listUsers[Math.floor(Math.random() * listUsers.length)]
-    }
-  }
-
   render() {
-    return <Portfolio user={this.state.user} apiKey='LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' showFeatured />;
+
+    const Param = ({ match }) => <Portfolio user={match.params.username} showFeatured />;
+    const ParamDefault = ({ match }) => {
+      let listUsers = ['AitorPrieto', 'emas', 'pixego', 'akirax', 'dennisschafer', 'superfiction'];
+      let username = listUsers[Math.floor(Math.random() * listUsers.length)];
+
+      return <Portfolio user={username} showFeatured />;
+    };
+
+    return (
+      <Router>
+        <Switch>
+          <Route path="/:username" component={Param} />
+          <Route path="/" component={ParamDefault} />
+        </Switch>
+      </Router>
+    );
   }
 }
 

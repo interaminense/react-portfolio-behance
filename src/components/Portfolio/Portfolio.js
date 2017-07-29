@@ -4,22 +4,18 @@ import Projects from './Projects';
 import './style/main.css';
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-
-    let url = 'https://api.behance.net/v2';
-
-    this.state = {
-      urlUser: `${url}/users/${this.props.user}?client_id=${this.props.apiKey}`,
-      urlProjects: `${url}/users/${this.props.user}/projects?client_id=${this.props.apiKey}`,
-    }
-  }
-
   render() {
+
+    const API_KEY = this.props.apiKey === undefined ? 'LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' : this.props.apiKey;
+
+    let baseUrl = `https://api.behance.net/v2/users/${this.props.user}`;
+    let urlUser = `${baseUrl}?client_id=${API_KEY}`;
+    let urlProjects = `${baseUrl}/projects?client_id=${API_KEY}`;
+
     return (
       <div className="Portfolio">
-        <User url={this.state.urlUser} apiKey={this.props.apiKey} />
-        <Projects url={this.state.urlProjects} showFeatured={this.props.showFeatured} apiKey={this.props.apiKey} />
+        <User url={urlUser} />
+        <Projects url={urlProjects} showFeatured={this.props.showFeatured} /> 
       </div>
     );
   }

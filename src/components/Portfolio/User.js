@@ -6,16 +6,13 @@ class User extends Component {
     super(props);
 
     this.state = {
-      url: this.props.url,
-      user: {},
-      socialLink: [],
-      features: []
+      user: {}
     }
   }
 
   componentDidMount() {
 
-    jsonp(this.state.url, null, (err, data) => {
+    jsonp(this.props.url, null, (err, data) => {
       if (err) {
         console.log(err);
       } else {
@@ -55,17 +52,22 @@ class User extends Component {
           appreciations: data.user.stats.appreciations,
           views: data.user.stats.views,
           followers: data.user.stats.followers,
+          socialLink,
+          features
         };
 
-        this.setState({ user, socialLink, features });
-      }
+        this.setState({ user });
+      } 
     });
 
   }
 
   render() {
 
-    const socialLink = this.state.socialLink.map((link, i) => {
+    let _socialLink = this.state.user.socialLink || [];
+    let _features = this.state.user.features || [];
+
+    let socialLink = _socialLink.map((link, i) => {
       return (
         <li key={i}>
           <a className="btn" href={link.url} target="_blank">
@@ -75,7 +77,7 @@ class User extends Component {
       );
     });
 
-    const features = this.state.features.map((feature, i) => {
+    let features = _features.map((feature, i) => {
       return (
         <li key={i}>
           <a href={feature.url} target="_blank">
