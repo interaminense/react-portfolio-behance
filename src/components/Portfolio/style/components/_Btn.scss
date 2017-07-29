@@ -26,7 +26,7 @@
     background-color: $btn-primary-background-color;
 
     &[href]:hover {
-      color: $btn-default-color-hover;
+      color: $btn-primary-color-hover;
       background-color: $btn-primary-background-color-hover;
     }
   }
