@@ -56,6 +56,8 @@ $portfolio-user-info-margin: $gap * 2;
 $badge-padding: 2px 8px;
 $badge-margin: 0 3px 3px 0;
 $badge-border-radius: 2px;
+$badge-background-color: darken($color-white, 15%);
+$badge-font-size: 10px;
 
 // Component Button
 
@@ -63,6 +65,16 @@ $btn-font-size: 12px;
 $btn-font-weight: 600;
 $btn-padding: 10px #{$gap};
 $btn-border-radius: 4px;
+
+$btn-default-color: $color-white;
+$btn-default-color-hover: $color-black;
+$btn-default-background-color: transparent;
+$btn-default-background-color-hover: $color-white;
+
+$btn-primary-color: $color-black;
+$btn-default-color-hover: $color-white;
+$btn-primary-background-color: transparent;
+$btn-primary-background-color-hover: darken($color-special, 10%);
 
 // Component Card
 
@@ -73,7 +85,7 @@ $card-transition-type-a: transform .2s ease-in-out, opacity .1s linear;
 $card-transition-type-b: opacity .2s ease-in-out .2s;
 $card-transition-type-c: height .2s ease-in-out .2s;
 $card-hover-scale: scale(1.15);
-$card-footer-h: 185px;
+$card-footer-h: 190px;
 $card-thumbnail-blur: blur(10px);
 $card-details-div-padding: 2px 5px;
 $card-details-div-margin: 0 0 0 8px;
@@ -83,8 +95,8 @@ $card-footer-small-margin: #{$gap} 0 0;
 $card-footer-small-font-weight: 200;
 $card-footer-h2-font-weight: 200;
 $card-footer-h2-margin: 5px 0 0 0;
-$card-footer-footer-margin: 0 -#{$gap};
-$card-footer-footer-padding: 10px #{$gap};
+$card-footer-footer-margin: 0;
+$card-footer-footer-padding: 5px 0px;
 
 // Component Material Icons
 

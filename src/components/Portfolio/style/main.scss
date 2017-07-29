@@ -5,7 +5,6 @@
 @import 'config/Variables';
 
 // Config
-@import 'config/Grid';
 @import 'config/App';
 @import 'config/Keyframes';
 @import 'config/Mixins';
@@ -18,3 +17,6 @@
 @import 'components/Btn';
 @import 'components/Card';
 @import 'components/Material-icons';
+
+// Grid System
+@import 'config/Grid';

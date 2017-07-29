@@ -1,7 +1,9 @@
 .badge {
-  background-color: darken($color-white, 15%);
+  background-color: $badge-background-color;
   padding: $badge-padding;
   margin: $badge-margin;
   display: inline-block;
   border-radius: $badge-border-radius;
+  text-transform: uppercase;
+  font-size: $badge-font-size;
 }
