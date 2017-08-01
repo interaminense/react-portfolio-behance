@@ -34,7 +34,6 @@ class User extends Component {
             let data = {
               name: project.name,
               published_on: () => moment(project.published_on * 1000).calendar(),
-              thumbnail: project.covers[115],
               image: project.covers[404] || project.covers[202],
               stats: {
                 appreciations: project.stats.appreciations,
@@ -70,7 +69,6 @@ class User extends Component {
 
       return (
         <article className={`Card Grid__cell xs-12 sm-6 md-3 lg-2 ${showFeatured()}`} key={i}>
-          <img className="Card__thumbnail" src={project.thumbnail} alt="preview project" />
           <img className="Card__media" src={project.image} alt="project" />
           <div className="Card__details">
             <div>

@@ -127,9 +127,9 @@ class User extends Component {
             <h1>{this.state.user.username}</h1>
             <h5>{this.state.user.display_name}</h5>
             <div>
-              <span data-tooltip="total of appreciations" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
-              <span data-tooltip="total of views" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
-              <span data-tooltip="total of followers" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
+              <span data-tooltip="total appreciations" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">thumb_up</i> {this.state.user.appreciations}</span>
+              <span data-tooltip="total views" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">visibility</i> {this.state.user.views}</span>
+              <span data-tooltip="total followers" data-tooltip-placement="top" className="btn btn--default"><i className="material-icons md-12">group</i> {this.state.user.followers}</span>
             </div>
             <p>{this.state.user.description}</p>
           </div>
