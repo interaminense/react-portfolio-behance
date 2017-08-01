@@ -1,0 +1,17 @@
+.Footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.2);
+  background-color: #1d1e28; }
+  .Footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .Footer ul li {
+      display: inline-block;
+      margin-left: 10px; }
