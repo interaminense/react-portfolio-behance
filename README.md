@@ -1,15 +1,15 @@
 # React Portfolio Behance
 
-This repository was created so people who have a Portfolio in Behance to use the component `<Portfolio />` 
+This repository was created so people, who have a Portfolio in Behance, can use the component `<Portfolio />` 
 made in [React App](https://github.com/facebookincubator/create-react-app).
 
-This component lists all the projects you have registered in your Behance account, and you will be able to customize your Portfolio.
+This component lists all the projects you have registered in your Behance account and also you will be able to customize your Portfolio.
 
 <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/print-1.png" />
 
 ## Demonstration
 
-Use the url below to test your Portfolio by putting your user name on Behance:
+Use the following url to test your Portfolio by putting your Behance username:
 
 ```
 https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
@@ -29,21 +29,21 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
 ## How to create your Portfolio using this component?
 
 
-1. Fork this repository;
+1. Fork this repository
 2. Clone the forked repository to your local machine:
 `git clone https://github.com/YOUR_USERNAME/react-portfolio-behance.git`
-3. install the project dependencies by typing `npm install`
-4. If you change the name of your repository, change the `const URL_DEFAULT` inside the` App.js` file to the name of your repository;
+3. Install the project dependencies by typing `npm install`
+4. If you change the name of your repository, change the `const URL_DEFAULT` inside the` App.js` file to the name of your repository
 5. Change the component parameters:
 ```html
 <Portfolio user={YOUR_USERNAME} apiKey={YOUR_APIKEY} showFeatured />
 ```
 
-## Do I need to pass an apiKey?
+## Do I need to pass an API Key?
 
-By default, the component uses a *apiKey* but each *apiKey* is limited **150** requests per hour, when exceeded, you will receive status code **429**. So it would be ideal to create a new *apiKey* to use with your Portfolio.
+By default, the component uses a *API Key* but each *API Key* is limited **150** requests per hour, when exceeded, you will receive status code **429**. So it would be ideal to create a new *API Key* to use with your Portfolio.
 
-Learn more about all the documentation offered by Behance [https://www.behance.net/dev](https://www.behance.net/dev).
+Learn more about all the documentation offered by [Behance](https://www.behance.net/dev).
 
 <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/print-2.png" />
 
@@ -51,8 +51,8 @@ Learn more about all the documentation offered by Behance [https://www.behance.n
 
 | Name         | Type    | Default                            | Required | Description
 |--------------|---------|------------------------------------|----------|------------
-| user         | String  | undefined                          | yes      | User name in Behance
-| apiKey       | String  | 'LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' | no       | apiKey provided by Behance
+| user         | String  | undefined                          | yes      | Username in Behance
+| API Key      | String  | 'LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' | no       | API Key provided by Behance
 | showFeatured | Boolean | false                              | no       | Displays the Behance project with more views
 
 ## Contribute
