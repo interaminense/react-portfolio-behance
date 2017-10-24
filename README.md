@@ -1,15 +1,15 @@
 # React Portfolio Behance
 
-This repository was created so people who have a Portfolio in Behance to use the component `<Portfolio />` 
+This repository was created so people who have a Portfolio in Behance can use the component `<Portfolio />` 
 made in [React App](https://github.com/facebookincubator/create-react-app).
 
-This component lists all the projects you have registered in your Behance account, and you will be able to customize your Portfolio.
+This component lists all the projects you have registered in your Behance account, being able to customize your Portfolio too.
 
 <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/print-1.png" />
 
 ## Demonstration
 
-Use the url below to test your Portfolio by putting your user name on Behance:
+Use url below to test your Portfolio by putting your username on Behance:
 
 ```
 https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
@@ -30,10 +30,11 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
 
 
 1. Fork this repository;
-2. Clone the forked repository to your local machine:
+2. Clone the forked repository to your local machine:  
 `git clone https://github.com/YOUR_USERNAME/react-portfolio-behance.git`
-3. install the project dependencies by typing `npm install`
-4. If you change the name of your repository, change the `const URL_DEFAULT` inside the` App.js` file to the name of your repository;
+3. Install the project dependencies by typing  
+`npm install`
+4. If ever change the name of your repository, **keep in mind** that you will need to change the `const URL_DEFAULT` inside the` App.js` file to the new name of your repository;
 5. Change the component parameters:
 ```html
 <Portfolio user={YOUR_USERNAME} apiKey={YOUR_APIKEY} showFeatured />
@@ -57,7 +58,7 @@ Learn more about all the documentation offered by Behance [https://www.behance.n
 
 ## Contribute
 
-Feel free to contribute to this Repository. <b>I'll be very happy</b> :)
+Feel free to contribute to this Repository. **I'll be very happy** :)
 
 ## Credits
 
