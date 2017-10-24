@@ -31,7 +31,7 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
 
 1. Fork this repository;
 2. Clone the forked repository to your local machine:
-`git clone https: // github.com / YOUR_USERNAME / react-portfolio-behance.git`
+`git clone https://github.com/YOUR_USERNAME/react-portfolio-behance.git`
 3. install the project dependencies by typing `npm install`
 4. If you change the name of your repository, change the `const URL_DEFAULT` inside the` App.js` file to the name of your repository;
 5. Change the component parameters:
