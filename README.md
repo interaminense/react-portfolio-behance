@@ -1,14 +1,15 @@
 # React Portfolio Behance
 
-Este repositório foi criado para que as pessoas que tem um Portfólio no Behance possam utilizar o componente `<Portfolio />` feito em [React App](https://github.com/facebookincubator/create-react-app).
+This repository was created so people who have a Portfolio in Behance to use the component `<Portfolio />` 
+made in [React App](https://github.com/facebookincubator/create-react-app).
 
-Este componente lista todos os projetos que você tem cadastrado na sua conta do Behance, e você poderá customizar da sua forma seu Portifólio.
+This component lists all the projects you have registered in your Behance account, and you will be able to customize your Portfolio.
 
 <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/print-1.png" />
 
-## Demostração
+## Demonstration
 
-Utilize a url abaixo para testar o seu Portfólio colocando o nome do seu usuário no Behance:
+Use the url below to test your Portfolio by putting your user name on Behance:
 
 ```
 https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
@@ -17,7 +18,7 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
     <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/gif.gif" />
 </div>
 
-### Exemplos
+### Examples
 
 * imcreator - [http://interaminense.github.io/react-portfolio-behance/imcreator](http://interaminense.github.io/react-portfolio-behance/imcreator)
 * jordanamorais - [http://interaminense.github.io/react-portfolio-behance/jordanamorais](http://interaminense.github.io/react-portfolio-behance/jordanamorais)
@@ -25,45 +26,44 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
 * Ramotion - [http://interaminense.github.io/react-portfolio-behance/Ramotion](http://interaminense.github.io/react-portfolio-behance/Ramotion)
 * AitorPrieto - [http://interaminense.github.io/react-portfolio-behance/AitorPrieto](http://interaminense.github.io/react-portfolio-behance/AitorPrieto)
 
+## How to create your Portfolio using this component?
 
 
-## Como criar seu Portfólio utilizando este componente?
-
-1. Fork este repositório;
-2. Clone o repositório Forkado para a sua máquina local:
-`git clone https://github.com/YOUR_USERNAME/react-portfolio-behance.git`
-3. instale as dependências do projeto digitando `npm install`
-4. Caso você mude o nome do seu repositório, altere a `const URL_DEFAULT` dentro do arquivo `App.js` para o nome do seu repositório;
-5. Altere os parâmetros do componente:
+1. Fork this repository;
+2. Clone the forked repository to your local machine:
+`git clone https: // github.com / YOUR_USERNAME / react-portfolio-behance.git`
+3. install the project dependencies by typing `npm install`
+4. If you change the name of your repository, change the `const URL_DEFAULT` inside the` App.js` file to the name of your repository;
+5. Change the component parameters:
 ```html
 <Portfolio user={YOUR_USERNAME} apiKey={YOUR_APIKEY} showFeatured />
 ```
 
-## Preciso passar uma apiKey?
+## Do I need to pass an apiKey?
 
-Por padrão, o componente utiliza uma *apiKey* mas cada *apiKey* são limitadas **150** requests por hora, quando ultrapassado, você receberá o código de status **429**. Então seria ideal criar uma nova *apiKey* para utilizar com seu Portfólio.
+By default, the component uses a * apiKey * but each * apiKey * is limited ** 150 ** requests per hour, when exceeded, you will receive status code ** 429 **. So it would be ideal to create a new * apiKey * to use with your Portfolio.
 
-Saiba mais sobre toda documentação oferecida pelo Behance [https://www.behance.net/dev](https://www.behance.net/dev).
+Learn more about all the documentation offered by Behance [https://www.behance.net/dev](https://www.behance.net/dev).
 
 <img src="https://raw.githubusercontent.com/interaminense/react-portfolio-behance/master/imgs-readme/print-2.png" />
 
-## Documentação
+## Documentation
 
 | Name         | Type    | Default                            | Required | Description
 |--------------|---------|------------------------------------|----------|------------
-| user         | String  | undefined                          | yes      | Nome do usuário no Behance
-| apiKey       | String  | 'LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' | no       | apiKey fornecida pelo Behance
-| showFeatured | Boolean | false                              | no       | Exibe destacadamente o projeto do Behance com mais views
+| user         | String  | undefined                          | yes      | User name in Behance
+| apiKey       | String  | 'LDGQKFP7dsmkhIKUAGG67ChSDASj1cWD' | no       | apiKey provided by Behance
+| showFeatured | Boolean | false                              | no       | Displays the Behance project with more views
 
-## Contribua
+## Contribute
 
-Sinta-se livre para contribuir com este Repositório. <b>Vou ficar muit feliz</b> :)
+Feel free to contribute to this Repository. <b> I'll be very happy </ b> :)
 
-## Créditos
+## Credits
 
 * [Behance Development](https://www.behance.net/dev)
 * [Create React App](https://github.com/facebookincubator/create-react-app)
 
-## Licença
+## License
 
 `MIT`
