@@ -41,7 +41,7 @@ https://interaminense.github.io/react-portfolio-behance/YOUR_USERNAME
 
 ## Do I need to pass an apiKey?
 
-By default, the component uses a * apiKey * but each * apiKey * is limited ** 150 ** requests per hour, when exceeded, you will receive status code ** 429 **. So it would be ideal to create a new * apiKey * to use with your Portfolio.
+By default, the component uses a *apiKey* but each *apiKey* is limited **150** requests per hour, when exceeded, you will receive status code **429**. So it would be ideal to create a new *apiKey* to use with your Portfolio.
 
 Learn more about all the documentation offered by Behance [https://www.behance.net/dev](https://www.behance.net/dev).
 
@@ -57,7 +57,7 @@ Learn more about all the documentation offered by Behance [https://www.behance.n
 
 ## Contribute
 
-Feel free to contribute to this Repository. <b> I'll be very happy </ b> :)
+Feel free to contribute to this Repository. <b>I'll be very happy</b> :)
 
 ## Credits
 
