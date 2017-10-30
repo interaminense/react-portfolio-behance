@@ -68,7 +68,7 @@ class User extends Component {
       });
 
       return (
-        <article className={`Card Grid__cell xs-12 sm-6 md-3 lg-2 ${showFeatured()}`} key={i}>
+        <article className={`Card Grid__cell xs-6 sm-4 md-3 lg-2 ${showFeatured()}`} key={i}>
           <img className="Card__media" src={project.image} alt="project" />
           <div className="Card__details">
             <div>

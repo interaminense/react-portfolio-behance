@@ -70,7 +70,12 @@ body {
     height: inherit;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    @media (max-width: 992px) {
+      .User .User__content {
+        flex-flow: column;
+        justify-content: center; } }
     .User .User__content > div {
       text-align: center;
       width: 100%; }
@@ -88,13 +93,16 @@ body {
     .User .User__content h1 {
       font-family: "Russo One", sans-serif;
       font-weight: normal;
-      font-size: 80px;
+      font-size: 35px;
       text-transform: uppercase;
       color: transparent;
       margin: 0;
       background: linear-gradient(rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.6) 50%);
       background-clip: text;
       -webkit-background-clip: text; }
+      @media (min-width: 992px) {
+        .User .User__content h1 {
+          font-size: 80px; } }
     .User .User__content h5 {
       font-family: "Russo One", sans-serif;
       font-size: 30px;
@@ -103,11 +111,10 @@ body {
       color: rgba(255, 255, 255, 0.1);
       margin: 0; }
   .User .User__links {
-    position: absolute;
     right: 0;
     bottom: 0;
-    margin: 30px;
-    padding: 0; }
+    padding: 0;
+    text-align: center; }
     .User .User__links li {
       list-style: none;
       display: inline-block;
@@ -124,17 +131,14 @@ body {
       list-style: none;
       display: inline-block;
       margin: 0 5px; }
+      @media (max-width: 992px) {
+        .User .User__features li {
+          margin: 0 3px; } }
     .User .User__features a {
       display: block; }
     .User .User__features img {
       border-radius: 0; }
   .User .User__info {
-    position: absolute;
-    top: initial;
-    right: initial;
-    bottom: 0;
-    left: 0;
-    margin: 30px;
     width: auto !important; }
 
 .Projects {
