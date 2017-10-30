@@ -28,7 +28,12 @@
     height: inherit;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    @media(max-width:992px) {
+      flex-flow:column;
+      justify-content: center;
+    }
 
     > div {
       text-align: center;
@@ -53,7 +58,10 @@
     h1 {
       font-family: $family-type-a;
       font-weight: normal;
-      font-size: $portfolio-user-content-h1-font-size;
+      font-size:35px;
+      @media(min-width:992px){
+        font-size: $portfolio-user-content-h1-font-size;
+      }
       text-transform: uppercase;
       color: transparent;
       margin: 0;
@@ -73,11 +81,10 @@
   }
 
   .User__links {
-    position: absolute;
     right: 0;
     bottom: 0;
-    margin: $portfolio-user-links-margin;
     padding: 0;
+    text-align:center;
 
     li {
       list-style: none;
@@ -95,6 +102,10 @@
       list-style: none;
       display: inline-block;
       margin: $portfolio-user-features-li-margin;
+      @media(max-width:992px){
+        margin: 0 3px;
+      }
+
     }
 
     a {
@@ -107,8 +118,6 @@
   }
 
   .User__info {
-    @include absolute(initial, initial, 0, 0);
-    margin: $portfolio-user-info-margin;
     width: auto !important;
   }
 }

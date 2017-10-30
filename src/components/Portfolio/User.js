@@ -133,10 +133,7 @@ class User extends Component {
             </div>
             <p>{this.state.user.description}</p>
           </div>
-          <ul className="User__links">
-            {socialLink}
-          </ul>
-          <ul className="User__features">
+                   <ul className="User__features">
             {features}
           </ul>
           <div className="User__info">
@@ -146,7 +143,11 @@ class User extends Component {
             <a href={`http://${this.state.user.website}`} target="_blank" className={`btn btn--default ${this.state.user.website === '' ? 'hide' : ''}`}>
               <i className="material-icons md-12">home</i> my website
             </a>
-          </div>
+          </div> 
+          <ul className="User__links">
+            {socialLink}
+          </ul>
+
         </div>
       </div>
     );
