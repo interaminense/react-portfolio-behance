@@ -8,18 +8,27 @@ $color: #2c2d3d;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap:wrap;
   font-family: $family;
   color: rgba(#fff, .2);
   background-color: darken($color, 7%);
+  @media(max-width:1200px){
+    justify-content: center;
+  }
+
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    @media(max-width:1200px){
+      margin-top: 30px;
+    }
 
     li {
       display: inline-block;
       margin-left: 10px;
     }
   }
+
 }
