@@ -133,7 +133,7 @@ class User extends Component {
             </div>
             <p>{this.state.user.description}</p>
           </div>
-                   <ul className="User__features">
+          <ul className="User__features">
             {features}
           </ul>
           <div className="User__info">

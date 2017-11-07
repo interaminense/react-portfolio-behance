@@ -317,6 +317,9 @@ body {
     margin: 0;
     padding: 0;
     list-style: none; }
+    @media (max-width: 768px) {
+      .Nav .Nav__menu {
+        display: none; } }
   .Nav .Nav__menu li {
     display: inline-block;
     margin-left: 10px; }

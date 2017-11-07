@@ -24,7 +24,7 @@ class App extends Component {
             <Route path={`${URL_DEFAULT}`} component={ParamDefault} />
           </Switch>
         </Router>
-        <Footer />
+        <Footer/>
       </div>
     );
   }
