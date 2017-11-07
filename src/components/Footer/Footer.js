@@ -35,7 +35,9 @@ class Footer extends Component {
           </ul>
 
         <p>
-           Copyright © 2017. <i>Made with ❤ by Adriano Interaminense</i>
+          Copyright © 2017.
+          Made by <a href="https://github.com/interaminense" rel="noopener noreferrer" target="_blank">Adriano Interaminense</a>, 
+          with contribution of <a href="https://github.com/jessuircleydson" rel="noopener noreferrer" target="_blank">Jessuir Cleydson</a>
         </p>
       </footer>
     );
