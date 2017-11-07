@@ -11,22 +11,26 @@ class Footer extends Component {
             <li>
               <a href="https://github.com/interaminense/react-portfolio-behance"
                 rel="noopener noreferrer"
-                target="_blank" className="btn btn--default">React Portfolio Behance</a>
+                target="_blank"
+                className="btn btn--default">React Portfolio Behance</a>
             </li>
             <li>
               <a href="https://github.com/interaminense"
                 rel="noopener noreferrer"
-                target="_blank" className="btn btn--default">my github</a>
+                target="_blank"
+                className="btn btn--default">my github</a>
             </li>
             <li>
               <a href="https://twitter.com/adinteraminense"
                 rel="noopener noreferrer"
-                target="_blank" className="btn btn--default">my twitter</a>
+                target="_blank"
+                className="btn btn--default">my twitter</a>
             </li>
             <li>
               <a href="https://codepen.io/interaminense"
                 rel="noopener noreferrer"
-                target="_blank" className="btn btn--default">my codepen</a>
+                target="_blank"
+                className="btn btn--default">my codepen</a>
             </li>
           </ul>
 

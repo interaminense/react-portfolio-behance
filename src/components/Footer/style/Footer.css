@@ -12,6 +12,11 @@
   @media (max-width: 1200px) {
     .Footer {
       justify-content: center; } }
+  .Footer a:not(.btn):link, .Footer a:not(.btn):visited, .Footer a:not(.btn):hover, .Footer a:not(.btn):focus, .Footer a:not(.btn):active {
+    color: currentColor; }
+  @media (max-width: 768px) {
+    .Footer img {
+      width: 100%; } }
   .Footer ul {
     list-style: none;
     margin: 0;

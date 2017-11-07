@@ -30,7 +30,8 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap:wrap;
-    @media(max-width:992px) {
+
+    @media(max-width: 992px) {
       flex-flow:column;
       justify-content: center;
     }
@@ -58,8 +59,9 @@
     h1 {
       font-family: $family-type-a;
       font-weight: normal;
-      font-size:35px;
-      @media(min-width:992px){
+      font-size: 35px;
+
+      @media(min-width: 992px){
         font-size: $portfolio-user-content-h1-font-size;
       }
       text-transform: uppercase;
@@ -102,18 +104,19 @@
       list-style: none;
       display: inline-block;
       margin: $portfolio-user-features-li-margin;
-      @media(max-width:992px){
+
+      @media(max-width: 992px){
         margin: 0 3px;
       }
 
     }
 
     a {
-        display: block;
+      display: block;
     }
 
     img {
-        border-radius: 0;
+      border-radius: 0;
     }
   }
 
