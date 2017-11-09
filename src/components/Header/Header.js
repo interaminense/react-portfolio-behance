@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 
-
 class Header extends Component {
 
   render() {
-
+    
     return (
-
       <header>
         <nav className={`Nav ${this.props.showHeader ? 'Nav--is-visible' : ''}`}>
           <div className="Nav__title">
@@ -18,7 +16,6 @@ class Header extends Component {
           </ul>
         </nav>
       </header>
-        
     );
   }
 }
