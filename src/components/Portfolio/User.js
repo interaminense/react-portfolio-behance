@@ -107,7 +107,7 @@ class User extends Component {
     return (
       <div className="User">
  
-        <Header showHeader={this.state.showHeader} userImage={this.state.user.image} userName={this.state.username} socialLinks={socialLink} />
+        <Header showHeader={this.state.showHeader} userImage={this.state.user.image} userName={this.state.user.username} socialLinks={socialLink} />
  
         <div className="User__mask">
           <div className="User__bg" style={{ backgroundImage: `url(${this.state.user.image})` }}></div>
