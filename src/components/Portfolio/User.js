@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header';
 import jsonp from 'jsonp';
 
 class User extends Component {
@@ -105,19 +106,9 @@ class User extends Component {
 
     return (
       <div className="User">
-
-        <header>
-          <nav className={`Nav ${this.state.showHeader ? 'Nav--is-visible' : ''}`}>
-            <div className="Nav__title">
-              <img className="Nav__thumbnail" src={this.state.user.image} alt="user" />
-              <span className="Nav__name">{this.state.user.username}</span>
-            </div>
-            <ul className="Nav__menu">
-              {socialLink}
-            </ul>
-          </nav>
-        </header>
-
+ 
+        <Header showHeader={this.state.showHeader} userImage={this.state.user.image} userName={this.state.username} socialLinks={socialLink} />
+ 
         <div className="User__mask">
           <div className="User__bg" style={{ backgroundImage: `url(${this.state.user.image})` }}></div>
         </div>
